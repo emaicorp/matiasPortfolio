@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Sidebar</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 9999;
+  }
+  .sidebar-content {
+    padding: 16px;
+    color: white;
+  }
+  .open-btn {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 10000;
+  }
+</style>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <div class="sidebar-content">
+    <h2>Sidebar</h2>
+    <p>This is a sidebar that slides in from the left.</p>
+    <button onclick="closeNav()">Close</button>
+  </div>
+</div>
+
+<button class="open-btn" onclick="openNav()">Open Sidebar</button>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+}
+</script>
+
+</body>
+</html>
