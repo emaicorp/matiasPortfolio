@@ -3,55 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Animated Sidebar</title>
+<title>Scroll-triggered Card Flip</title>
 <style>
   body {
     margin: 0;
     font-family: Arial, sans-serif;
+    height: 2000px; /* Just for demonstration purpose */
   }
-  .sidebar {
+
+  .card-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 300px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    transform-origin: center;
+  }
+
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .card-face {
+    width: 100%;
     height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    z-index: 9999;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .sidebar-content {
-    padding: 16px;
-    color: white;
+
+  .front {
+    background-color: #f0f0f0;
   }
-  .open-btn {
-    position: fixed;
-    left: 10px;
-    top: 10px;
-    z-index: 10000;
+
+  .back {
+    background-color: #2196f3;
+    transform: rotateY(180deg);
+    color: #fff;
   }
 </style>
 </head>
 <body>
-
-<div id="mySidebar" class="sidebar">
-  <div class="sidebar-content">
-    <h2>Sidebar</h2>
-    <p>This is a sidebar that slides in from the left.</p>
-    <button onclick="closeNav()">Close</button>
+<div class="card-container">
+  <div class="card">
+    <div class="card-face front">
+      <h2>Front Content</h2>
+      <p>This is the front of the card.</p>
+    </div>
+    <div class="card-face back">
+      <h2>Back Content</h2>
+      <p>This is the back of the card.</p>
+    </div>
   </div>
 </div>
 
-<button class="open-btn" onclick="openNav()">Open Sidebar</button>
-
 <script>
-function openNav() {
-  document.getElementById("mySidebar").style.width = "250px";
-}
+document.addEventListener('DOMContentLoaded', function() {
+  const card = document.querySelector('.card');
+  window.addEventListener('scroll', function() {
+    if (isElementInViewport(card)) {
+      card.classList.add('flipped');
+    }
+  });
 
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-}
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+});
 </script>
 
 </body>

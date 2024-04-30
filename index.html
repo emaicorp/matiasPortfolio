@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matias - Personal Portfolio Template</title>
     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <!-- LOCAL CSS FILES -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/media-query-md.css">
 
@@ -13,6 +14,15 @@
 
     <!-- GOOGLE FONTS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        .fs-small{
+  font-size: small;
+}
+.fs-larger{
+  font-size: 30px;
+}
+    </style>
 </head>
 <body>
         <section class="banner-image">
@@ -98,6 +108,7 @@
                 <div class=""></div>
             
             </div>
+            <div class="empty"></div>
         
         
             <div class="header">
@@ -170,10 +181,10 @@
         </section>
         <section class="about">
            <div class="about-details">
-            <div class="about-icon">
+            <div class="about-icon pop">
                 <img src="assets/images/section-star-removebg-preview.png" alt="" srcset="">
             </div>
-            <div class="about-text">
+            <div class="about-text translateY">
                 <p>
                     I'm David Matias, I'm a Brand & Webflow Designer, Currently residing in the lush Victoria Street London, Matias operates globally and is ready to take on any design challenge.
 
@@ -189,61 +200,585 @@
            </div>
            <div class="about-details-expand">
                 <div class="about-details-expand-div">
-                    <div class="details-element active" data-content="about">
-                        <div class="details-icon">
+                    <div class="details-element  active" data-content="about">
+                        <div class="details-icon pop">
                             <img src="assets/images/personal-infothumb-removebg-preview.png" alt="" srcset="">
                         </div>
                         <div class="details-text">
-                            <h1>Personal Info</h1>
+                            <h1 class="translateY">Personal Info</h1>
                             <div class="details-text-icon-div">
 
-                                <p>
+                                <p class="translateY">
                                     Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur, aliquam quaerats voluptatem. Ut enim ad minima veniam, exercitationem laboriosam, nisi ut aliquid ex ea autem velit esse quam nihil
                                 </p>
-                                <div class="deatils-contact-info">
-                                    <div class=""></div>
-                                    <div class=""></div>
-                                    <div class=""></div>
-                                    <div class=""></div>
+                                <div class="details-contact-info pop">
+                                    <div class="details-contact-info-element">
+                                        <h4>Email</h4>
+                                        <a href="#">dev.mostafizar.com</a>
+
+                                    </div>
+                                    <div class="details-contact-info-element">
+                                        <h4>Phone</h4>
+                                        <a href="#">01575699193</a>
+
+                                    </div>
+                                    <div class="details-contact-info-element">
+                                        <h4>Address</h4>
+                                        <a href="#">Dahagram, Lalmonirhat</a>
+
+                                    </div>
+                                    <div class="details-contact-info-element">
+                                        <h4>Follow</h4>
+                                        <div class="contact-icons">
+                                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                            <a href=""><i class="fa-brands fa-youtube"></i></a>
+                                        </div>
+
+                                    </div>
+                                  
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="details-element" data-content="experience">
-                        <div class="details-icon">
+                    </div> 
+                    <!-- End Of About element -->
+                    <div class="details-element " data-content="experience">
+                        <div class="details-icon pop">
                             <img src="assets/images/personal-infothumb-removebg-preview.png" alt="" srcset="">
                         </div>
                         <div class="details-text">
-                            <h1>EXPERIENCE</h1>
-                            <p>
-                                I'm David Matias, I'm a Brand & Webflow Designer, Currently residing in the lush Victoria Street London, Matias operates globally and is ready to take on any design challenge.
-                            </p>
+                            <h1 class="translateY">Experience</h1>
+                            <div class="experience-text-list">
+                                <p class="translateY">
+                                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur, aliquam quaerats voluptatem. Ut enim ad minima veniam, exercitationem laboriosam, nisi ut aliquid ex ea autem velit esse quam nihil
+    
+                                </p>
+                                
+                                <div class="experiences-list pop">
+                                   <h4 class="main-color">In 2011</h4>
+                                   <div class="">
+                                    <h3>Software Engineer</h3>
+                                    <p>
+                                        UI Head & Manager
+                                    </p>
+                                   </div>
+                                </div>
+                              
+                                <div class="experiences-list pop">
+                                    <h4 class="main-color">In 2016</h4>
+                                    <div class="">
+                                     <h3>Product Designer</h3>
+                                     <p>
+                                         Head Of Department
+                                     </p>
+                                    </div>
+                                </div>
+                               
+                                <div class="experiences-list pop">
+                                    <h4 class="main-color">In 2023</h4>
+                                    <div class="">
+                                     <h3>Senior Designer</h3>
+                                     <p>
+                                         Fiverr.com
+                                     </p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                    </div>
-                    <div class="details-element" data-content="education">
-                        <div class="details-icon">
+                    </div> 
+                    <!-- End of Experience Div -->
+                    <div class="details-element " data-content="education">
+                        <div class="details-icon pop">
                             <img src="assets/images/personal-infothumb-removebg-preview.png" alt="" srcset="">
                         </div>
                         <div class="details-text">
-                            <h1>EDUCATION</h1>
-                            <p>
-                                I'm David Matias, I'm a Brand & Webflow Designer, Currently residing in the lush Victoria Street London, Matias operates globally and is ready to take on any design challenge.
-                            </p>
+                            <h1 class="translateY">EDUCATION</h1>
+                            <div class="experience-text-list">
+                                <p class="translateY">
+                                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur, aliquam quaerats voluptatem. Ut enim ad minima veniam, exercitationem laboriosam, nisi ut aliquid ex ea autem velit esse quam nihil
+    
+                                </p>
+                                
+                                <div class="education-list pop">
+                                   <h4 class="main-color ">In 2011 - 2013</h4>
+                                   <div class="">
+                                    <h3>Programming Course</h3>
+                                    <p>
+                                        New York University
+                                    </p>
+                                   </div>
+                                </div>
+                              
+                                <div class="education-list pop">
+                                    <h4 class="main-color">In 2013 - 2016</h4>
+                                    <div class="">
+                                     <h3>University Of Design</h3>
+                                     <p>
+                                        Kingston, United States
+                                     </p>
+                                    </div>
+                                </div>
+                               
+                                <div class="education-list pop">
+                                    <h4 class="main-color">In 2016 - 2018</h4>
+                                    <div class="">
+                                     <h3>Web Design Course</h3>
+                                     <p>
+                                         New York University
+                                     </p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="details-element" data-content="skills">
-                        <div class="details-icon">
+
+                    <!-- End of Education Details -->
+                    <div class="details-element " data-content="skills">
+                        <div class="details-icon pop">
                             <img src="assets/images/personal-infothumb-removebg-preview.png" alt="" srcset="">
                         </div>
                         <div class="details-text">
-                            <h1>SKILLS</h1>
-                            <p>
-                                I'm David Matias, I'm a Brand & Webflow Designer, Currently residing in the lush Victoria Street London, Matias operates globally and is ready to take on any design challenge.
-                            </p>
+                            <h1 class="translateY">SKILLS</h1>
+                            <div class="details-text-icon-div">
+
+                                <p class="translateY">
+                                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur, aliquam quaerats voluptatem. Ut enim ad minima veniam, exercitationem laboriosam, nisi ut aliquid ex ea autem velit esse quam nihil
+                                </p>
+                                <div class="details-contact-info pop">
+                                    <div class="details-contact-info-element skilks">
+                                        <div class="skill-div">
+
+                                            <div class="skill-icon">
+                                                <img src="assets/images/html-removebg-preview.png" alt="">
+                                            </div>
+                                            <div class="skill-icon-text">
+    
+                                                <h4>HTML</h4>
+                                                <h1>80%</h1>
+
+                                            </div>
+                                        </div>
+                                        
+                                        </div>
+                                    <div class="details-contact-info-element skilks">
+                                        <div class="skill-div">
+
+                                            <div class="skill-icon">
+                                                <img src="assets/images/figma-removebg-preview.png" alt="">
+                                            </div>
+                                            <div class="skill-icon-text">
+    
+                                                <h4>Figma</h4>
+                                                <h1>90%</h1>
+
+                                            </div>
+                                        </div>
+                                        
+                                        </div>
+                                    <div class="details-contact-info-element skilks">
+                                        <div class="skill-div">
+
+                                            <div class="skill-icon">
+                                                <img src="assets/images/word-removebg-preview.png" alt="">
+                                            </div>
+                                            <div class="skill-icon-text">
+    
+                                                <h4>WordPress</h4>
+                                                <h1>95%</h1>
+
+                                            </div>
+                                        </div>
+                                        
+                                        </div>
+                                    <div class="details-contact-info-element skilks">
+                                        <div class="skill-div">
+
+                                            <div class="skill-icon">
+                                                <img src="assets/images/boot-removebg-preview.png" alt="">
+                                            </div>
+                                            <div class="skill-icon-text">
+    
+                                                <h4>BootStrap</h4>
+                                                <h1>97%</h1>
+                                            </div>
+                                        </div>
+                                        
+                                        </div>
+
+                                    </div>
+                                  
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
            </div>
+        </section>
+        <section class="marquee-section mark2">
+            <div
+            class=" "
+          >
+            <div class="slide-track2">
+              <div class="slide">
+                <img src="assets/images/ts1.png" alt="" />
+              </div>
+              <div class="slide">
+                <img src="assets/images/ts2.png" alt="" />
+              </div>
+              <div class="slide">
+                <img src="assets/images/ts3.png" alt="" />
+              </div>
+              <div class="slide">
+                <img src="assets/images/ts4.png" alt="" />
+              </div>
+              <div class="slide">
+                <img src="assets/images/ts1.png" alt="" />
+              </div>
+              <div class="slide">
+                <img src="assets/images/ts2.png" alt="" />
+              </div>
+              <div class="slide">
+                <img src="assets/images/ts3.png" alt="" />
+              </div>
+              <div class="slide">
+                <img src="assets/images/ts4.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="award translateY">
+            <div class="awards">
+                <h3>Our Awards</h3>
+                <a href="" class="works">View My Works &RightArrow;</a>
+            </div>
+            <div class="awards">
+                <p>Site Of The Day</p>
+                <p>	Css & Animation</p>
+                <p>2018</p>
+            </div>
+            <div class="awards">
+                <p>Best Business Model</p>
+                <p>New Strategy</p>
+                <p>2019</p>
+            </div>
+            <div class="awards">
+                <p>Motion Graphic</p>
+                <p>	3D & Visual Effect</p>
+                <p>2020</p>
+            </div>
+            <div class="awards">
+                <p>Video Design</p>
+                <p>	Css & Animation</p>
+                <p>2022</p>
+            </div>
+
+     
+        </section>
+        <section class="project">
+            <div class="project-text">
+
+                <div class="offset translateYN">
+                    <span class="hhr"></span>
+                    <h2>Complete Project</h2>
+                    <span class="hhr"></span>
+                </div>
+                <div class="project-text-header translateY">
+                    <h2>
+                        Look At My Portfolio And Give Me Your Feedback
+                    </h2>
+                </div>
+            </div>
+            <div class="projects">
+                <div class="projects-elements ">
+                    <div class="project-element translateY">
+                        <div class="project-element-img">
+                            <img src="assets/images/pro1.png" alt="">
+                        </div>
+                        <div class="project-element-text">
+                            
+                            <div class="project-element-text-head">
+                                <h3>PRODUCT DESIGN</h3>
+                                <p>
+                                    Brand Identity & Motion Design 
+                                </p>
+                            </div>
+                                <div class="project-link">
+                                    <span class="material-symbols-outlined">
+                                        north_east
+                                        </span>
+                                </div>
+                            
+                        </div>
+                    </div>
+                    <div class="project-element translateY">
+                        <div class="project-element-img">
+                            <img src="assets/images/pro3.png" alt="">
+                        </div>
+                        <div class="project-element-text">
+                            
+                            <div class="project-element-text-head">
+                                <h3>UI/UX DESIGN</h3>
+                                <p>
+                                    Brand Identity & Motion Design 
+                                </p>
+                            </div>
+                                <div class="project-link">
+                                    <span class="material-symbols-outlined">
+                                        north_east
+                                        </span>
+                                </div>
+                            
+                        </div>
+                    </div>
+                    <div class="project-element translateY">
+                        <div class="project-element-img">
+                            <img src="assets/images/pro5.png" alt="">
+                        </div>
+                        <div class="project-element-text">
+                            
+                            <div class="project-element-text-head">
+                                <h3>PRODUCT DESIGN</h3>
+                                <p>
+                                    Brand Identity & Motion Design 
+                                </p>
+                            </div>
+                                <div class="project-link">
+                                    <span class="material-symbols-outlined">
+                                        north_east
+                                        </span>
+                                </div>
+                            
+                        </div>
+                    </div>
+                    <div class="project-element translateY">
+                        <div class="project-element-img">
+                            <img src="assets/images/pro2.png" alt="">
+                        </div>
+                        <div class="project-element-text">
+                            
+                            <div class="project-element-text-head">
+                                <h3>PRODUCT DESIGN</h3>
+                                <p>
+                                    Brand Identity & Motion Design 
+                                </p>
+                            </div>
+                                <div class="project-link">
+                                    <span class="material-symbols-outlined">
+                                        north_east
+                                        </span>
+                                </div>
+                            
+                        </div>
+                    </div>
+                    <div class="project-element translateY">
+                        <div class="project-element-img">
+                            <img src="assets/images/pro4.png" alt="">
+                        </div>
+                        <div class="project-element-text">
+                            
+                            <div class="project-element-text-head">
+                                <h3>PRODUCT DESIGN</h3>
+                                <p>
+                                    Brand Identity & Motion Design 
+                                </p>
+                            </div>
+                                <div class="project-link">
+                                    <span class="material-symbols-outlined">
+                                        north_east
+                                        </span>
+                                </div>
+                            
+                        </div>
+                    </div>
+                    <div class="project-element translateY">
+                        <div class="project-element-img">
+                            <img src="assets/images/pro6.png" alt="">
+                        </div>
+                        <div class="project-element-text">
+                            
+                            <div class="project-element-text-head">
+                                <h3>PRODUCT DESIGN</h3>
+                                <p>
+                                    Brand Identity & Motion Design 
+                                </p>
+                            </div>
+                                <div class="project-link">
+                                    <span class="material-symbols-outlined">
+                                        north_east
+                                        </span>
+                                </div>
+                            
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+        </section>
+        <section class="click-me">
+            <div class="click translateYN">
+                <span>&RightArrow;</span>
+               <span> Click More work</span>
+            </div>
+        </section>
+        <section class="proposal">
+            <div class="proposal-text">
+
+                <div class="project-text ">
+    
+                    <div class="offset translateYN">
+                        <span class="hhr"></span>
+                        <h2>Need A Project?</h2>
+                    </div>
+                    <div class="project-text-header ">
+                        <h2 class="translateYN">
+                           Let's Work Together. Fixed A Meeting
+                        </h2>
+                    </div>
+                </div>
+                <div class="awards translateY">
+                    <div class="proposal-icon">
+                        
+                            <span class="material-symbols-outlined fs-larger">
+                                mail
+                                </span>
+                        
+                                <div class="proposal-icon-text">
+                                    <h3>Email</h3>
+                                    <p>davidmatias3</p>
+                                </div>
+                            </div>
+                   
+                </div>
+                <div class="awards translateY">
+                    <div class="proposal-icon "><span class="fs-larger">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </span>
+                    <div class="proposal-icon-text">
+                        <h3>Location</h3>
+                        <p>Victoria Street London, England</p>
+                    </div>
+                </div>
+                   
+                </div>
+            </div>
+            <div class="proposal-img pop">
+                <img src="assets/images/project-need-removebg-preview.png" alt="" srcset="">
+            </div>
+        </section>
+        <section class="services">
+            <div class="project-text">
+
+                <div class="offset translateYN">
+                    <span class="hhr"></span>
+                    <h2>Complete Project</h2>
+                    <span class="hhr"></span>
+                </div>
+                <div class="project-text-header translateY">
+                    <h2>
+                        Look At My Portfolio And Give Me Your Feedback
+                    </h2>
+                </div>
+            </div>
+            <div class="service">
+                <div class="awards translateY">
+                    <div class="proposal-icon ">
+                        <h2>01</h2>
+                        <div class="service-header">
+                            <h3>Designer</h3>
+                            <h2>Illustration Design</h2>
+                        </div>
+                    </div>
+                    <div class="proposal-icon-text">
+                        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. sunt in culpa qui
+                            officia deserunt mollit</p>
+                            <span class="material-symbols-outlined">
+                                north_east
+                                </span>
+                    </div>
+                
+            </div>
+                <div class="awards translateY">
+                    <div class="proposal-icon ">
+                        <h2>02</h2>
+                        <div class="service-header">
+                            <h3>Branding</h3>
+                            <h2>Business Branding</h2>
+                        </div>
+                    </div>
+                    <div class="proposal-icon-text">
+                        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. sunt in culpa qui
+                            officia deserunt mollit</p>
+                            <span class="material-symbols-outlined">
+                                north_east
+                                </span>
+                    </div>
+                
+            </div>
+                <div class="awards translateY">
+                    <div class="proposal-icon ">
+                        <h2>03</h2>
+                        <div class="service-header">
+                            <h3>UI/UX Design</h3>
+                            <h2>Web UI/UX Design</h2>
+                        </div>
+                    </div>
+                    <div class="proposal-icon-text">
+                        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. sunt in culpa qui
+                            officia deserunt mollit</p>
+                            <span class="material-symbols-outlined">
+                                north_east
+                                </span>
+                    </div>
+                
+            </div>
+                <div class="awards translateY">
+                    <div class="proposal-icon ">
+                        <h2>04</h2>
+                        <div class="service-header">
+                            <h3>Web Design</h3>
+                            <h2>Application Design</h2>
+                        </div>
+                    </div>
+                    <div class="proposal-icon-text">
+                        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. sunt in culpa qui
+                            officia deserunt mollit</p>
+                            <span class="material-symbols-outlined">
+                                north_east
+                                </span>
+                    </div>
+                
+            </div>
+                <div class="awards translateY">
+                    <div class="proposal-icon ">
+                        <h2>05</h2>
+                        <div class="service-header">
+                            <h3>Seo Analytics</h3>
+                            <h2>Digital Marketing</h2>
+                        </div>
+                    </div>
+                    <div class="proposal-icon-text">
+                        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. sunt in culpa qui
+                            officia deserunt mollit</p>
+                            <span class="material-symbols-outlined">
+                                north_east
+                                </span>
+                    </div>
+                
+            </div>
+        </section>
+        <section class="work-process">
+            <div class="flip process-element">
+
+            </div>
         </section>
   
     
