@@ -74,4 +74,28 @@ function reveal(element){
     reveal('.pop')
     reveal('.flip')
  })
+ const carouselContainer = document.querySelectorAll('.test-slide');
+
+ let intervalId = setInterval(myFunction, 2000);
+ 
+ function myFunctio() {
+     carouselContainer.forEach((item, i) => {
+         let containerDimension = item.getBoundingClientRect();
+         let containerWidth = containerDimension.width;
+         item.scrollLeft += containerWidth;
+         console.log("slidded")
+     });
+ }
+ 
+// intervalId()
+//  carouselContainer.forEach((item, i) =>{
+//     let containerDimension = item.getBoundingClientRect();
+//     let containerWidth = containerDimension.width;
+//     nxtBtn[i].addEventListener("click", ()=>{
+//         item.scrollLeft += containerWidth;
+//     })
+//     preBtn[i].addEventListener("click", ()=>{
+//         item.scrollLeft -= containerWidth;
+//     })
+// })
 })

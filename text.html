@@ -3,91 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scroll-triggered Card Flip</title>
+<title>Slideshow with Card Elements</title>
 <style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    height: 2000px; /* Just for demonstration purpose */
-  }
-
-  .card-container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .slideshow-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
   }
 
   .card {
-    width: 300px;
-    height: 200px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    transform-origin: center;
-  }
-
-  .card.flipped {
-    transform: rotateY(180deg);
-  }
-
-  .card-face {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 300px;
+    display: none;
   }
 
-  .front {
-    background-color: #f0f0f0;
+  .slide-number {
+    text-align: center;
+    margin-top: 20px;
   }
 
-  .back {
-    background-color: #2196f3;
-    transform: rotateY(180deg);
-    color: #fff;
+  .slide-number button {
+    background-color: #bbb;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .slide-number button.active {
+    background-color: #333;
+    color: white;
   }
 </style>
 </head>
 <body>
-<div class="card-container">
-  <div class="card">
-    <div class="card-face front">
-      <h2>Front Content</h2>
-      <p>This is the front of the card.</p>
-    </div>
-    <div class="card-face back">
-      <h2>Back Content</h2>
-      <p>This is the back of the card.</p>
-    </div>
+
+<div class="slideshow-container">
+  <div class="card" style="background-color: #f0f0f0;">Slide 1</div>
+  <div class="card" style="background-color: #ccc;">Slide 2</div>
+  <div class="card" style="background-color: #999;">Slide 3</div>
+
+  <div class="slide-number">
+    <button class="indicator-button active" onclick="currentSlide(1)"></button>
+    <button class="indicator-button" onclick="currentSlide(2)"></button>
+    <button class="indicator-button" onclick="currentSlide(3)"></button>
   </div>
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const card = document.querySelector('.card');
-  window.addEventListener('scroll', function() {
-    if (isElementInViewport(card)) {
-      card.classList.add('flipped');
-    }
-  });
+let slideIndex = 0;
+showSlides();
 
-  function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+function showSlides() {
+  let slides = document.getElementsByClassName("card");
+  let buttons = document.getElementsByClassName("indicator-button");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    buttons[i].classList.remove("active");
   }
-});
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  buttons[slideIndex-1].classList.add("active");
+  setTimeout(showSlides, 2000); // Change slides every 2 seconds
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 </script>
 
 </body>
