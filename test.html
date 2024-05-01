@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Grid with Divs</title>
+<style>
+  .parent-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    grid-gap: 10px; /* Gap between grid items */
+  }
+
+  .child-div {
+    background-color: #f0f0f0; /* Placeholder background color */
+    border: 1px solid #ccc; /* Placeholder border */
+    padding: 20px;
+    text-align: center;
+  }
+
+  .child-div:nth-child(even) {
+    /* Apply custom styles to every second div */
+    height: 120px; /* Set height slightly taller than the rest */
+  }
+</style>
+</head>
+<body>
+
+<div class="parent-container">
+  <div class="child-div">1</div>
+  <div class="child-div">2</div>
+  <div class="child-div">3</div>
+  <div class="child-div">4</div>
+  <div class="child-div">5</div>
+  <div class="child-div">6</div>
+</div>
+
+</body>
+</html>

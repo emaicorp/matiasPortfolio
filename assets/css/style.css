@@ -316,25 +316,18 @@ margin-top: 5vh !important;
   height: 10vh;
 }
 .banner-image{
-  /* height: 100vh; */
   background-color:var(--black-color) ;
   background-image: url("../images/banner-bg.png");
   background-size:cover;
-  /* overflow: hidden; */
   background-position: center ;
   width: 100%;
-  /* position: relative; */
+  height: fit-content;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  /* padding-left: 20px; */
 }
 .header{
   display: flex;
   height: 57vh;
-  /* margin-top: 20vh; */
-  /* padding: 0px 10px; */
-  
-  /* height: 100%; */
 }
 .header-aside{
   z-index: 10;
@@ -347,6 +340,9 @@ margin-top: 5vh !important;
   padding-top: 6vh;
   padding-left: 20px;
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
 }
 
@@ -1227,20 +1223,4 @@ transition: all 0.5s ease;
   background-color: var(--main-color);
   text-decoration: none;
   color: var(--black-color);
-}
-@media only screen and (min-width: 768px){
-    .toggle1-div{
-        display: none !important;
-    }
-    .logo{
-        width: 10%;
-    }
-   .nav-menu{
-    display: flex !important;
-    /* font-size: 40px; */
-   }
-   .nav-menu ul{
-    font-size: 15px;
-   }
-
 }
