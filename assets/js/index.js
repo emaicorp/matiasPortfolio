@@ -74,28 +74,35 @@ function reveal(element){
     reveal('.pop')
     reveal('.flip')
  })
- const carouselContainer = document.querySelectorAll('.test-slide');
 
- let intervalId = setInterval(myFunction, 2000);
+
+ const carouselContainer = document.querySelectorAll('.testimonies-slide');
+ const slides = document.querySelectorAll('.test-slide');
+ const slideBtn = document.querySelectorAll('.fa-circle-dot');
+let currentSlide = 0
+ let intervalId = setInterval(myFunction, 5000);
  
- function myFunctio() {
+ function myFunction() {
      carouselContainer.forEach((item, i) => {
          let containerDimension = item.getBoundingClientRect();
          let containerWidth = containerDimension.width;
          item.scrollLeft += containerWidth;
-         console.log("slidded")
+         currentSlide ++;
+         if(currentSlide >= slides.length){
+            item.scrollLeft = 0;
+            currentSlide = 0;
+        }
+         slideBtn.forEach((btn, i) => {
+             btn.classList.remove('active');
+             if(i  == currentSlide){
+
+                 btn.classList.add('active');
+             }
+
+         })
+    
+       
      });
  }
- 
-// intervalId()
-//  carouselContainer.forEach((item, i) =>{
-//     let containerDimension = item.getBoundingClientRect();
-//     let containerWidth = containerDimension.width;
-//     nxtBtn[i].addEventListener("click", ()=>{
-//         item.scrollLeft += containerWidth;
-//     })
-//     preBtn[i].addEventListener("click", ()=>{
-//         item.scrollLeft -= containerWidth;
-//     })
-// })
+
 })
