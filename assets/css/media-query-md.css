@@ -45,6 +45,77 @@
         font-size: x-large;
     }
    }
+
+   .header-aside{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border: 1px solid pink;
+    .header-aside-items{
+        height: 10vh;
+        width: 50%;
+        transform: rotate(90deg);
+        margin: auto;
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+
+    }
+    .header-aside-items:nth-child(1){
+        justify-content: space-evenly;
+        margin-left: -50vh;
+
+        
+        .contact{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img{
+                transform: rotate(270deg);
+            }
+        }
+        .scroll{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 50%;
+
+            img{
+                transform: rotate(270deg);
+                width: 5vh;
+            }
+        }
+    }
+    .header-aside-items:nth-child(2){
+        margin-right: -40vh;
+        gap: 5vh;
+        .scroll{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 50%;
+
+            img{
+                transform: rotate(270deg);
+                width: 5vh;
+            }
+        }
+        .icons{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            a{
+                color: white;
+                background-color: black;
+                padding: 15px;
+                border-radius: 50%;
+                text-decoration: none;
+            }
+        }
+ 
+    }
+   }
    .playBtn-div{
     width: 40%;
    }
