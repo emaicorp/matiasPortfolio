@@ -15,7 +15,16 @@
    .nav-menu ul{
     font-size: 15px;
    }
- 
+   .side-bar{
+    transform: translateX(150%);
+    .side-bar-content{
+        width: 30%;
+        /* padding: 30px; */
+      }
+   }
+   .side-bar.active {
+    transform: translateX(95%); /* Move the sidebar into the viewport */
+  }
   .header{
     height: 100vh;
     margin-top: 20vh;

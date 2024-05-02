@@ -15,6 +15,12 @@
 .main-color{
   color: var(--main-color);
 }
+.text-fade{
+  color: var(--text-fade-color);
+}
+.text-white{
+  color: var(--white-color);
+}
 
 *{
     scroll-behavior: smooth;
@@ -91,7 +97,7 @@
   .nav{
     padding: 20px 5px;
     position: fixed;
-    z-index: 999;
+    z-index: 600;
     width: 100%;
     height: 12vh;
     margin-bottom: 5vh;
@@ -146,7 +152,9 @@
     opacity: 0;
     visibility: hidden;
     top: 12vh;
-    
+    display: flex;
+    flex-direction: column;
+    /* gap: -10px; */
     z-index: 600;
     padding: 30px;
     width: 40vh;
@@ -159,11 +167,11 @@
 .toolpic a{
     text-decoration: none !important;
     color: var(--black-color);
-    margin-bottom: 5px;
-    transform: translateX(10px);
-    transition: transform 0.3s ease;
+    /* margin-bottom: 15px; */
+   /* border: 1px solid red; */
+    transition: all 0.3s ease;
 }.toolpic a:hover{
-    transform:  translateX(-10px);
+   margin-left: 5px;
     color: var(--main-color);
 }
 .toolpic::before{
@@ -293,23 +301,102 @@ margin-top: 5vh !important;
   top: 0;
   left: 0;
   right: 0;
-  width: 100%; /* Set a width that ensures the sidebar won't overflow */
+  width: 80%; /* Set a width that ensures the sidebar won't overflow */
   height: 100%;
-  padding: 20px;
+  padding: 10px;
+  /* margin-top: 10vh; */
   overflow-x: hidden;
-  z-index: 600;
+  display: flex;
+  justify-content: start;
+  z-index: 999;
   background-color: var(--black-color);
-  transform: translateX(100%); /* Move the sidebar out of the viewport initially */
+  transform: translateX(30%); /* Move the sidebar out of the viewport initially */
   transition: transform 0.3s ease; /* Add a transition for smooth animation */
 }
 
 .side-bar.active {
-  transform: translateX(0); /* Move the sidebar into the viewport */
+  transform: translateX(200%); /* Move the sidebar into the viewport */
+}
+.side-bar-content{
+  width: 100%;
+  padding: 20px 10px;
+  height: 100%;
+
+    .side-text{
+    .logo-p{
+
+      
+          .side-logo{
+            height: 15vh;
+            width: 80%;
+            img{
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+         
+           
+          }
+    }
+       .side-logo-text{
+
+               p{
+              color: var(--text-fade-color);
+            }
+            }
+  }
+
+  .side-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    p{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  .side-links{
+    width: 100%;
+    display: flex;
+    font-size: x-large;
+    gap: 10px;
+    margin-bottom: 5vh;
+    a{
+      padding: 10px;
+      border-radius: 50%;
+      background-color: var(--main-color);
+      color: var(--black-color);
+      text-decoration: none;
+    }
+  }
+  .side-button{
+    width: 100%;
+    display: flex;
+    height: 10vh;
+    background-color: var(--main-color);
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    margin-bottom: 5vh;
+    border-radius: 10px;
+    gap: 10px;
+  }
 }
 .cancel-btn{
-  background-color: var(--white-color);
   display: flex;
   justify-content: end;
+  span{
+    font-size: larger;
+    font-weight: lighter;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: var(--main-color);
+  }
+
 }
 
 .empty{
