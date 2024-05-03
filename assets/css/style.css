@@ -194,6 +194,10 @@
     background-color: var(--white-color);
     transform: rotate(45deg);
 }
+
+.toolpic-li .toolpic a{
+  color: var(--black-color);
+}
 .toolpic-li:hover{
   color: var(--main-color);
     .toolpic{
