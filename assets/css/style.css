@@ -138,7 +138,16 @@
     /* width: 50%; */
     font-size: var(--fs-2);
     list-style-type: none !important;
-}.nav-menu ul li{
+}
+.nav-menu ul a{
+  text-decoration: none;
+  color: var(--white-color);
+}
+.nav-menu ul a:hover{
+  color: var(--main-color);
+}
+
+.nav-menu ul li{
     color: var(--white-color) ;
     margin-left: 4vh !important;
     transition: color 0.3s ease;
@@ -186,6 +195,7 @@
     transform: rotate(45deg);
 }
 .toolpic-li:hover{
+  color: var(--main-color);
     .toolpic{
         opacity: 1;
         visibility: visible;
@@ -736,6 +746,8 @@ margin-top: 5vh !important;
   border-radius: 10px;
   width: 100%;
   padding: 30px;
+  border: 1px solid transparent;
+  transition: all 0.5s ease;
   h4{
     color: var(--text-fade-color);
     font-weight: lighter;
@@ -749,6 +761,9 @@ margin-top: 5vh !important;
     font-size: larger;
 
   }
+}
+.details-contact-info-element:hover{
+ border-color: var(--main-color);
 }
 .experiences-list , .education-list{
 position: relative;
@@ -878,7 +893,28 @@ position: relative;
 .project-element{
   width: 100%;
   margin-top: 5vh;
+  *{
+    transition: all 0.7s ease;
+  }
 
+}
+.project-element:hover{
+
+  .project-element-img{
+    overflow: hidden;
+    /* scale: 1.1; */
+    img{
+      scale: 1.05;
+      object-fit: contain;
+    }
+  }
+  .project-link{
+    background-color: var(--main-color);
+
+    span{
+      color: var(--black-color);
+    }
+  }
 }
 .project-element-img{
   width: 100%;
@@ -970,7 +1006,13 @@ transition: all 0.5s ease;
 }
 .proposal-text .awards{
   color: var(--white-color);
+  *{
+    transition: all 0.7s ease;
+  }
 
+}
+.proposal-text .awards:hover{
+  border-color: var(--main-color);
 }
 .proposal-text .project-text-header{
   border-bottom: 1px solid var(--border-bottom-color2) ;
@@ -1036,6 +1078,18 @@ transition: all 0.5s ease;
   display: flex;
   flex-direction: column;
   padding: 25px 15px;
+  *{
+    transition: 0.5s ease;
+  }
+}
+.service .awards:hover{
+  border-color: var(--main-color);
+  .proposal-icon-text{
+    span{
+      color: var(--black-color);
+      background-color: var(--main-color);
+    }
+  }
 }
 .service .proposal-icon{
   height: 10vh;
@@ -1218,11 +1272,30 @@ transition: all 0.5s ease;
 }
 .blog-content .service .awards{
   margin-top: 0;
+  *{
+    transition: all 0.3s ease;
+  }
+}
+.blog-content .service .awards:hover{
+  .blog-head{
+    h1{
+      color: var(--main-color);
+    }
+  }
+  .blog-icon{
+    span{
+      border-color: var(--main-color);
+
+      color: var(--main-color);
+    }
+  }
 }
 .blog-head h4{
   width: fit-content;
   padding: 10px 20px;
   border-radius: 30px;
+  color: var(--text-fade-color);
+  font-weight: lighter;
   border: 1px solid var(--border-bottom-color2);
   margin-bottom: 3vh;
 }
@@ -1272,6 +1345,7 @@ transition: all 0.5s ease;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+
 }
 .touch-links p{
   display: flex;
@@ -1281,6 +1355,15 @@ transition: all 0.5s ease;
   width: 100%;
   padding: 20px;
   border-radius: 10px;
+  transition: 0.3s ease;
+}
+.touch-links p:hover{
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  color: var(--black-color);
+  span{
+    color: var(--black-color);
+  }
 }
 .footer{
   background-image: url("../images/about-bg.png");
@@ -1306,8 +1389,10 @@ transition: all 0.5s ease;
   text-align: right;
 }
 .arrow-up a{
-  padding: 30px;
+  padding: 20px;
   background-color: var(--main-color);
   text-decoration: none;
   color: var(--black-color);
+  font-size: larger;
+  border-radius: 10px;
 }
